@@ -242,7 +242,7 @@ def analisa(navegador, devedor, quantidade):
     try:
         qtde_3 = WebDriverWait(navegador, 40).until(
             EC.presence_of_element_located((By.XPATH, qtd_painel_3))).text
-        if int(qtde_3) <= 168:
+        if int(qtde_3) <= 180:
             quantidade_input_3 = WebDriverWait(navegador, 50).until(
                 EC.presence_of_element_located((By.XPATH, qtd_qtde_3)))
             actions = ActionChains(navegador)
