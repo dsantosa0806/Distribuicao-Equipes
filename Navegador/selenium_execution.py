@@ -181,7 +181,6 @@ def analisa(navegador, devedor, quantidade):
             # Distribui a equipe
             WebDriverWait(navegador, 40).until(
                 EC.element_to_be_clickable((By.XPATH, btn_distribuir_equipe))).click()
-
             # Clique Busca texto Reverter
             err = True
             while err:
