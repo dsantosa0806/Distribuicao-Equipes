@@ -9,6 +9,15 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 
 
+qtde_limite_equipe_1 = 500
+qtde_limite_equipe_2 = 500
+qtde_limite_equipe_3 = 500
+qtde_limite_equipe_4 = 500
+qtde_limite_equipe_5 = 500
+qtde_limite_equipe_6 = 500
+qtde_limite_equipe_7 = 500
+qtde_limite_equipe_8 = 500
+
 ## Oh Lord, forgive me for what i'm about to Code !
 
 equipe_1 = 'Equipe Cobrança 1 (Adina Ferreira Silva)'
@@ -142,10 +151,10 @@ def analisa(navegador, devedor, quantidade):
             EC.presence_of_element_located((By.XPATH, quant_autos))).text
         valor = WebDriverWait(navegador, 40).until(
             EC.presence_of_element_located((By.XPATH, valor_total))).text
-        if int(qtde) != quantidade:
-            print(f'Erro {devedor}', 'A quantidade do SIOR é diferente da quantidade liberada')
-            return 1
-        elif float(valor.replace('.','').replace(',','.')) < 800.0:
+        # if int(qtde) != quantidade:
+        #     print(f'Erro {devedor}', 'A quantidade do SIOR é diferente da quantidade liberada')
+        #     return 1
+        if float(valor.replace('.','').replace(',','.')) < 800.0:
             print(f'Erro {devedor}', 'Valor total abaixo do piso')
             return 1
     except:
@@ -171,7 +180,7 @@ def analisa(navegador, devedor, quantidade):
     try:
         qtde_1 = WebDriverWait(navegador, 40).until(
             EC.presence_of_element_located((By.XPATH, qtd_painel_1))).text
-        if int(qtde_1) <= 150:
+        if int(qtde_1) <= qtde_limite_equipe_1:
             quantidade_input = WebDriverWait(navegador, 50).until(
                 EC.presence_of_element_located((By.XPATH, qtd_qtde_1)))
             actions = ActionChains(navegador)
@@ -206,7 +215,7 @@ def analisa(navegador, devedor, quantidade):
     try:
         qtde_2 = WebDriverWait(navegador, 40).until(
             EC.presence_of_element_located((By.XPATH, qtd_painel_2))).text
-        if int(qtde_2) <= 168:
+        if int(qtde_2) <= qtde_limite_equipe_2:
             quantidade_input_2 = WebDriverWait(navegador, 50).until(
                 EC.presence_of_element_located((By.XPATH, qtd_qtde_2)))
             actions = ActionChains(navegador)
@@ -241,7 +250,7 @@ def analisa(navegador, devedor, quantidade):
     try:
         qtde_3 = WebDriverWait(navegador, 40).until(
             EC.presence_of_element_located((By.XPATH, qtd_painel_3))).text
-        if int(qtde_3) <= 180:
+        if int(qtde_3) <= qtde_limite_equipe_3:
             quantidade_input_3 = WebDriverWait(navegador, 50).until(
                 EC.presence_of_element_located((By.XPATH, qtd_qtde_3)))
             actions = ActionChains(navegador)
@@ -276,7 +285,7 @@ def analisa(navegador, devedor, quantidade):
     try:
         qtde_4 = WebDriverWait(navegador, 40).until(
             EC.presence_of_element_located((By.XPATH, qtd_painel_4))).text
-        if int(qtde_4) <= 168:
+        if int(qtde_4) <= qtde_limite_equipe_4:
             quantidade_input_4 = WebDriverWait(navegador, 50).until(
                 EC.presence_of_element_located((By.XPATH, qtd_qtde_4)))
             actions = ActionChains(navegador)
@@ -311,7 +320,7 @@ def analisa(navegador, devedor, quantidade):
     try:
         qtde_5 = WebDriverWait(navegador, 40).until(
             EC.presence_of_element_located((By.XPATH, qtd_painel_5))).text
-        if int(qtde_5) <= 168:
+        if int(qtde_5) <= qtde_limite_equipe_5:
             quantidade_input_5 = WebDriverWait(navegador, 50).until(
                 EC.presence_of_element_located((By.XPATH, qtd_qtde_5)))
             actions = ActionChains(navegador)
@@ -346,7 +355,7 @@ def analisa(navegador, devedor, quantidade):
     try:
         qtde_6 = WebDriverWait(navegador, 40).until(
             EC.presence_of_element_located((By.XPATH, qtd_painel_6))).text
-        if int(qtde_6) <= 168:
+        if int(qtde_6) <= qtde_limite_equipe_6:
             quantidade_input_6 = WebDriverWait(navegador, 50).until(
                 EC.presence_of_element_located((By.XPATH, qtd_qtde_6)))
             actions = ActionChains(navegador)
@@ -381,7 +390,7 @@ def analisa(navegador, devedor, quantidade):
     try:
         qtde_7 = WebDriverWait(navegador, 40).until(
             EC.presence_of_element_located((By.XPATH, qtd_painel_7))).text
-        if int(qtde_7) <= 168:
+        if int(qtde_7) <= qtde_limite_equipe_7:
             quantidade_input_7 = WebDriverWait(navegador, 50).until(
                 EC.presence_of_element_located((By.XPATH, qtd_qtde_7)))
             actions = ActionChains(navegador)
@@ -416,7 +425,7 @@ def analisa(navegador, devedor, quantidade):
     try:
         qtde_8 = WebDriverWait(navegador, 40).until(
             EC.presence_of_element_located((By.XPATH, qtd_painel_8))).text
-        if int(qtde_8) <= 151:
+        if int(qtde_8) <= qtde_limite_equipe_8:
             quantidade_input_8 = WebDriverWait(navegador, 50).until(
                 EC.presence_of_element_located((By.XPATH, qtd_qtde_8)))
             actions = ActionChains(navegador)
@@ -439,7 +448,7 @@ def analisa(navegador, devedor, quantidade):
                 else:
                     err = True
                     time.sleep(1)
-            print(f'{equipe_8} Distribuído - {quantidade} - {datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")}')
+            print(f'{equipe_8} Distribuído - {quantidade} - {devedor} - {datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")}')
             return 1
         else:
             return 2
@@ -485,7 +494,8 @@ def extracao_final(navegador):
             EC.presence_of_element_located((By.XPATH, qtd_painel_8))).text
         print(
             f'BLOCO DE DISTRIBUIÇÃO {datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")}\n'
-            f'---------------------------------------------------------------------------------\n'
+            f'---------------------------------------------------------------------------------\n'            
+            f'Painel Atual\n'         
             f'{equipe_1} - {qtde_1} \n'
             f'{equipe_2} - {qtde_2} \n'
             f'{equipe_3} - {qtde_3} \n'

@@ -26,7 +26,7 @@ navegador = webdriver.Chrome(options=option_navegador(),service=service_navegado
 
 acessa_sior(navegador)
 # Passar aqui Login e Senha do SIOR
-login(navegador,'','')
+login(navegador,'04278152159','Trabalho@2021')
 acessa_tela_incial_distribuicao(navegador)
 
 table = pd.read_excel('tables/devedor_distribuir.xlsx')
@@ -49,4 +49,3 @@ for i, devedor in enumerate(table['Devedor']):
 
 acessa_tela_incial_distribuicao(navegador)
 extracao_final(navegador)
-

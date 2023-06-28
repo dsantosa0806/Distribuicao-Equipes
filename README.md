@@ -8,6 +8,7 @@ Para rodar a ferramenta em sua máquina, é necessário possuir os seguintes req
 - Python instalado na máquina;
 - Necessário instalar as importações que irá solicitar na primeira execução;
 - Ter acesso ao sistema SIOR.
+- Ter Excel instalado na máquina
 
 ### **Funcionalidade**
 
@@ -29,14 +30,14 @@ Primeira posição = **_Solicitado pelo supervisor_**
 Segunda posição = **_Limite do Robô_**
 
 ```
-Equipe Cobrança 1 (Adina Ferreira Silva) - 130 - 150
-Equipe Cobrança 2 (Adriele Cerilo Mendes Monte) - 156 - 167
-Equipe Cobrança 3 (Anna Gontijo) - 180 - 180
-Equipe Cobrança 4 (Edney Bandeira Carvalho) - 156 - 167
-Equipe Cobrança 5 (Nathalia Ferreira Massad) - 156 - 167
-Equipe Cobrança 6 (Jéssica Vieira Lopes) - 156 - 167
-Equipe Cobrança 7 (Gabriel Kalil Moraes) - 156 - 167
-Equipe Cobrança 8 (Thiago Gamboa Vilar Martins) - 115 - 150
+Equipe Cobrança 1 (Adina Ferreira Silva) - 500 - 500
+Equipe Cobrança 2 (Adriele Cerilo Mendes Monte) - 500 - 500
+Equipe Cobrança 3 (Anna Gontijo) - 500 - 500
+Equipe Cobrança 4 (Edney Bandeira Carvalho) - 500 - 500
+Equipe Cobrança 5 (Nathalia Ferreira Massad) - 500 - 500
+Equipe Cobrança 6 (Jéssica Vieira Lopes) - 500 - 500
+Equipe Cobrança 7 (Gabriel Kalil Moraes) - 500 - 500
+Equipe Cobrança 8 (Thiago Gamboa Vilar Martins) - 500 - 500
 ```
 
 #### **IMPORTANTE**!

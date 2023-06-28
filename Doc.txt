@@ -2,7 +2,7 @@ Quantidade que deve ser distribuída por equipe diáriamente
 Primeira posição = Solicitado pelo supervisor
 Segunda posição = Limite do Robô
 
-Equipe Cobrança 1 (Adina Ferreira Silva) - 130 - 150
+Equipe Cobrança 1 (Adina Ferreira Silva) - 156 - 167
 Equipe Cobrança 2 (Adriele Cerilo Mendes Monte) - 156 - 167
 Equipe Cobrança 3 (Anna Gontijo) - 180 - 180
 Equipe Cobrança 4 (Edney Bandeira Carvalho) - 156 - 167
